@@ -6,39 +6,43 @@ function cardCalculation(){
 	var input5 = document.getElementById("in5").value;
 	var input6 = document.getElementById("in6").value;
 	//add error checking to see if input 1-4 are valid doubles
+	var bCCTA = (input5 === 'CCTA'|input5 === 'ccta');
+	var bCATH = (input5 === 'CATH'|input5 === 'cath');
+	var bMale = (input6 === 'M'|input6 === 'm');
+	var bFemale = (input6 === 'F'|input6 === 'f');
 
-	
-	/*
-	if(input5 === 'CCTA'|input5 === 'ccta'){
-		document.getElementById("out1").value = input1+input2;
-	}*/
+	if(!((bCCTA | bCATH) && (bMale | bFemale))){
+		alert('Please enter either CATH or CCTA and M or F .');
+		return;
+	}
 
 
 	if(input5 === 'CCTA'|input5 === 'ccta'){
 		document.getElementById("out1").value = cctaFn(input4);
 	}else if(input5 === 'CATH'|input5 === 'cath'){
 		document.getElementById("out1").value = cathFn(input4);
-	}else{
-		//display Error 
-		alert('Please enter either CCTA or CATH.');
 	}
 	
 	var output1 = +document.getElementById("out1").value;
 	if(input6 === 'M'|input6 === 'm'){
 		document.getElementById("out2").value = maleFn(input1,input2,output1);
+		document.getElementById("out3").value = maleFn(input1,input3,output1);
 	}else if (input6 === 'F'|input6 === 'f'){
 		document.getElementById("out2").value = femaleFn(input1,input2,output1);
+		document.getElementById("out3").value = femaleFn(input1,input3,output1);
 	}else{
 		//display Error 
 		alert('Please enter either M or F.');
+		return;
 	}
 	
 }
-
+//function for CCTA + output for FFR
 function cctaFn(input){
 	return -0.0000940239*(Math.pow(input,2))+0.0072859161*input+0.7608424526;
 }
 
+//function for CATH + output for FFR
 function cathFn(input){
 	return -0.0035*input +1.0318;
 }
