@@ -55,9 +55,9 @@ function femaleFn(in1,in2,in3){
 	return -6.3+0.0364*in1-0.000134*(Math.pow(in1,2))+0.0752*in2+3.6*in3-0.000904*in1*in2+0.00000337*(Math.pow(in1,2))*in2;
 }
 
-function showValue(newValue)
+function showValue(newValue, spanId)
 {
-	document.getElementById("range").innerHTML=newValue;
+	document.getElementById(spanId).innerHTML=newValue;
 }
 
 

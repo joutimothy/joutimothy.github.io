@@ -92,16 +92,24 @@
                     <form>
                         LVMI:
                         <br>
-                        <input type="range" min="0" max="250" id="in1"><br>
+                        <input type="range" min="0" max="250" id="in1" oninput="showValue(this.value, 'range1')">
+                        <span id="range1">125</span>
+                        <br>
                         DMP Before:
                         <br>
-                        <input type="range" min="0" max="220" id="in2"><br>
+                        <input type="range" min="0" max="220" id="in2" oninput="showValue(this.value, 'range2')">
+                        <span id="range2">110</span>
+                        <br>
                         DBP After:
                         <br>
-                        <input type="range" min="0" max="220" id="in3"><br>
+                        <input type="range" min="0" max="220" id="in3" oninput="showValue(this.value, 'range3')">
+                        <span id="range3">110</span>
+                        <br>
                         Cornary Stenosis:
                         <br>
-                        <input type="range" min="0" max="100" id="in4"><br>
+                        <input type="range" min="0" max="100" id="in4" oninput="showValue(this.value, 'range4')">
+                        <span id="range4">50</span>
+                        <br>
                         CCTA or CATH:
                         <br>
                         <input type="text" id="in5"><br>
