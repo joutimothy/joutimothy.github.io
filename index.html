@@ -81,78 +81,72 @@
                         <h2>Calculator</h2>
                         <p class="text-muted">Text Description</p>
                         <hr>
+                        <br>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <!-- empty element -->
-                <div class="col-md-2">    
-                </div>
-                <div class="col-md-3">    
+                <div class ="col-md-1"></div>
+                <div class="col-md-4">    
                     <form>
-                        LVMI:
+                        <p1 class = "text-xs-center">LVMI (g/m2):</p1><span id="range1">125</span>
                         <br>
                         <input type="range" min="0" max="250" id="in1" oninput="showValue(this.value, 'range1')">
-                        <span id="range1">125</span>
                         <br>
-                        DMP Before:
+                        <p1>DMP Before (mmHg):</p1><span id="range2">110</span>
                         <br>
-                        <input type="range" min="0" max="200" id="in2" oninput="showValue(this.value, 'range2')">
-                        <span id="range2">110</span>
+                        <input type="range" min="0" max="200" id="in2" oninput="showValue(this.value, 'range2')">   
                         <br>
-                        DBP After:
+                        <p1>DBP After (mmHg): </p1><span id="range3">110</span>
                         <br>
                         <input type="range" min="0" max="200" id="in3" oninput="showValue(this.value, 'range3')">
-                        <span id="range3">110</span>
                         <br>
-                        Cornary Stenosis:
+                        <p1>Cornary Stenosis: </p1> <span id="range4">50</span>
                         <br>
                         <input type="range" min="0" max="100" id="in4" oninput="showValue(this.value, 'range4')">
-                        <span id="range4">50</span>
                         <br>
+                        <p1>Category: </p1>
                         <select id = "in5">
                             <option value = "CCTA"> CCTA</option>
                             <option value = "CATH"> CATH</option>
                         </select>
                         <br>
+                        <br>
+                        <p1>Gender: </p1>
                         <select id = "in6">
                             <option value = "M"> Male</option>
                             <option value = "F"> Female</option>
                         </select>
                     </form>
                 </div>
-                <div class="col-md-3">
-                        <button type = "button" class="btn btn-success" onclick ="cardCalculation()"> 
+
+                <div class="col-md-2 button-Grp">
+                        <button type = "button" class="btn" onclick ="cardCalculation()"> 
                             Calculate
                         </button>
                 </div>
-                <div class="col-md-3">
+
+                <div class="col-md-4 outSection">
                     <form>
-                        CBF Before:
+                        <p1>CBF Before:</p1>
                         <br>
-                        <input type="text" id = "out2"><br>
-                        CBF AFter:
+                        <input type="text" id = "out2">
                         <br>
-                        <input type="text" id = "out3"><br>
+                        <p1>CBF AFter: </p1>
+                        <br>
+                        <input type="text" id = "out3">
+                        <br>
                     </form>
                 </div>
+                <div class ="col-md-1"></div>
             </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2016 Start Bootstrap. All Rights Reserved.</p>
-            <ul class="list-inline">
-                <li>
-                    <a href="#">Privacy</a>
-                </li>
-                <li>
-                    <a href="#">Terms</a>
-                </li>
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
-            </ul>
+            <p>&copy; Theme by Bootstrap. All Rights Reserved.</p>
         </div>
     </footer>
 

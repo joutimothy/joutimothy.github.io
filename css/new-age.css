@@ -58,6 +58,30 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+p1 {
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 18px; 
+}
+
+span{
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 18px;
+  font-weight: bold;
+  float: right;
+}
+select{
+  float: right;
+}
+
+.button-Grp{
+  text-align: center;
+}
+
+.outSection input{
+  width: 30%;
+  float: right;
+}
+
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -403,3 +427,8 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+
+input[type=range]{
+  height: 20px;
+}
+
