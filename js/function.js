@@ -16,14 +16,13 @@ function cardCalculation(){
 		return;
 	}
 
-
+	var output1 = 0;
 	if(input5 === 'CCTA'|input5 === 'ccta'){
-		document.getElementById("out1").value = cctaFn(input4);
+		output1 = cctaFn(input4);
 	}else if(input5 === 'CATH'|input5 === 'cath'){
-		document.getElementById("out1").value = cathFn(input4);
+		output1 = cathFn(input4);
 	}
 	
-	var output1 = +document.getElementById("out1").value;
 	if(input6 === 'M'|input6 === 'm'){
 		document.getElementById("out2").value = maleFn(input1,input2,output1);
 		document.getElementById("out3").value = maleFn(input1,input3,output1);
