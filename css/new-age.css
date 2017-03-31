@@ -61,7 +61,8 @@ p {
 
 p1 {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-  font-size: 18px; 
+  font-size: 18px;
+  display: inline-block;
 }
 
 span{
