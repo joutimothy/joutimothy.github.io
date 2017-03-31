@@ -1,3 +1,4 @@
+//calculation for the calculate button 
 function cardCalculation(){
 	var input1 = +document.getElementById("in1").value;
 	var input2 = +document.getElementById("in2").value;
@@ -36,6 +37,16 @@ function cardCalculation(){
 	}
 	
 }
+
+function resetAllFields(){
+	document.getElementById("in1").value = 125;
+	document.getElementById("in2").value = 110;
+	document.getElementById("in3").value = 110;
+	document.getElementById("in4").value= 50;
+	document.getElementById("out2").value = 0;
+	document.getElementById("out3").value = 0;
+}
+
 //function for CCTA + output for FFR
 function cctaFn(input){
 	return -0.0000940239*(Math.pow(input,2))+0.0072859161*input+0.7608424526;
@@ -54,6 +65,7 @@ function femaleFn(in1,in2,in3){
 	return -6.3+0.0364*in1-0.000134*(Math.pow(in1,2))+0.0752*in2+3.6*in3-0.000904*in1*in2+0.00000337*(Math.pow(in1,2))*in2;
 }
 
+//function for displayign the number in slider
 function showValue(newValue, spanId)
 {
 	document.getElementById(spanId).innerHTML=newValue;
