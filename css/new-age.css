@@ -85,6 +85,16 @@ select{
   margin-top: 7%;
 }
 
+.btn-danger{
+  display: inline-block;
+  width: 122px;
+}
+
+.btn-success{
+  display:inline-block;
+  width: 122px;
+}
+
 .outSection input{
   width: 30%;
   float: right;
