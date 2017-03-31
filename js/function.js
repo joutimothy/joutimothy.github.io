@@ -18,6 +18,8 @@ function cardCalculation(){
 	}
 
 	var output1 = 0;
+	var output2 = 0;
+	var output3 = 0;
 	if(input5 === 'CCTA'|input5 === 'ccta'){
 		output1 = cctaFn(input4);
 	}else if(input5 === 'CATH'|input5 === 'cath'){
@@ -25,16 +27,30 @@ function cardCalculation(){
 	}
 	
 	if(input6 === 'M'|input6 === 'm'){
-		document.getElementById("out2").value = maleFn(input1,input2,output1).toFixed(2);
-		document.getElementById("out3").value = maleFn(input1,input3,output1).toFixed(2);
+		output2 = maleFn(input1,input2,output1).toFixed(2);
+		output3 = maleFn(input1,input3,output1).toFixed(2);
+		document.getElementById("out2").value = output2;
+		document.getElementById("out3").value = output3;
 	}else if (input6 === 'F'|input6 === 'f'){
-		document.getElementById("out2").value = femaleFn(input1,input2,output1).toFixed(2);
-		document.getElementById("out3").value = femaleFn(input1,input3,output1).toFixed(2);
+		output2 = femaleFn(input1,input2,output1).toFixed(2);
+		output3 = femaleFn(input1,input3,output1).toFixed(2);
+		document.getElementById("out2").value = output2;
+		document.getElementById("out3").value = output3;
 	}else{
 		//display Error 
 		alert('Please enter either M or F.');
 		return;
 	}
+
+	//calcualte percent drop
+	var percentDrop = 0;	
+	var temp = (output2-output3)/output2;
+	if (temp < 0){
+		percentDrop = temp*-100;
+	}else{
+		percentDrop = temp* 100;
+	}
+	document.getElementById("out4").value = percentDrop.toFixed(1);
 	
 }
 
@@ -49,6 +65,7 @@ function resetAllFields(){
 	document.getElementById("range4").innerHTML= 50;
 	document.getElementById("out2").value = 0;
 	document.getElementById("out3").value = 0;
+	document.getElementById("out4").value = 0;
 }
 
 //function for CCTA + output for FFR
