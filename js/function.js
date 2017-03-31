@@ -40,9 +40,13 @@ function cardCalculation(){
 
 function resetAllFields(){
 	document.getElementById("in1").value = 125;
-	document.getElementById("in2").value = 110;
-	document.getElementById("in3").value = 110;
+	document.getElementById("in2").value = 100;
+	document.getElementById("in3").value = 100;
 	document.getElementById("in4").value= 50;
+	document.getElementById("range1").innerHTML = 125;
+	document.getElementById("range2").innerHTML = 100;
+	document.getElementById("range3").innerHTML = 100;
+	document.getElementById("range4").innerHTML= 50;
 	document.getElementById("out2").value = 0;
 	document.getElementById("out3").value = 0;
 }

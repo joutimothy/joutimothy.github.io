@@ -95,11 +95,11 @@
                         <br>
                         <input type="range" min="0" max="250" id="in1" oninput="showValue(this.value, 'range1')">
                         <br>
-                        <p1>DBP Before (mmHg):</p1><span id="range2">110</span>
+                        <p1>DBP Before (mmHg):</p1><span id="range2">100</span>
                         <br>
                         <input type="range" min="0" max="200" id="in2" oninput="showValue(this.value, 'range2')">   
                         <br>
-                        <p1>DBP After (mmHg): </p1><span id="range3">110</span>
+                        <p1>DBP After (mmHg): </p1><span id="range3">100</span>
                         <br>
                         <input type="range" min="0" max="200" id="in3" oninput="showValue(this.value, 'range3')">
                         <br>
@@ -127,7 +127,7 @@
                             Calculate
                         </button>
                         
-                        <button type = "button" class="btn btn-danger"> 
+                        <button type = "button" class="btn btn-danger" onclick ="resetAllFields()"> 
                             Reset
                         </button>
                 </div>
