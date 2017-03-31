@@ -24,11 +24,11 @@ function cardCalculation(){
 	}
 	
 	if(input6 === 'M'|input6 === 'm'){
-		document.getElementById("out2").value = maleFn(input1,input2,output1);
-		document.getElementById("out3").value = maleFn(input1,input3,output1);
+		document.getElementById("out2").value = maleFn(input1,input2,output1).toFixed(2);
+		document.getElementById("out3").value = maleFn(input1,input3,output1).toFixed(2);
 	}else if (input6 === 'F'|input6 === 'f'){
-		document.getElementById("out2").value = femaleFn(input1,input2,output1);
-		document.getElementById("out3").value = femaleFn(input1,input3,output1);
+		document.getElementById("out2").value = femaleFn(input1,input2,output1).toFixed(2);
+		document.getElementById("out3").value = femaleFn(input1,input3,output1).toFixed(2);
 	}else{
 		//display Error 
 		alert('Please enter either M or F.');
