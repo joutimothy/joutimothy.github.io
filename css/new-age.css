@@ -77,6 +77,8 @@ select{
 
 .button-Grp{
   text-align: center;
+  position: relative;
+  margin-top: 7%;
 }
 
 .outSection input{
