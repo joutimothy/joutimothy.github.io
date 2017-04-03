@@ -35,9 +35,9 @@ a:focus {
   color: #fcbd20;
 }
 hr {
-  max-width: 100px;
+  width: 85%;
   margin: 25px auto 0;
-  border-width: 1px;
+  border-width: 3px;
   border-color: rgba(34, 34, 34, 0.1);
 }
 hr.light {
@@ -455,5 +455,19 @@ span.result-text {
   float: none;
   font-size: 20px;
   color: maroon;
+}
+
+.calculator {
+  background-color: #ffe0d6;
+}
+
+.sec-head {
+  color: #af0101;
+  font-weight: bold;
+}
+
+.t1 {
+  color: #3322b5;
+  font-weight: bold;
 }
 
