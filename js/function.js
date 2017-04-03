@@ -29,13 +29,13 @@ function cardCalculation(){
 	if (bMale) {
 		output2 = maleFn(input1,input2,output1).toFixed(2);
 		output3 = maleFn(input1,input3,output1).toFixed(2);
-		document.getElementById("out2").value = output2;
-		document.getElementById("out3").value = output3;
+		document.getElementById("out2").innerHTML = output2;
+		document.getElementById("out3").innerHTML = output3;
 	}else if (bFemale) {
 		output2 = femaleFn(input1,input2,output1).toFixed(2);
 		output3 = femaleFn(input1,input3,output1).toFixed(2);
-		document.getElementById("out2").value = output2;
-		document.getElementById("out3").value = output3;
+		document.getElementById("out2").innerHTML = output2;
+		document.getElementById("out3").innerHTML = output3;
 	}else{
 		//display Error 
 		alert('Please enter either M or F.');
@@ -50,7 +50,7 @@ function cardCalculation(){
 	}else{
 		percentDrop = temp* 100;
 	}
-	document.getElementById("out4").value = percentDrop.toFixed(1);
+	document.getElementById("out4").innerHTML = percentDrop.toFixed(1);
 	
 }
 
@@ -63,9 +63,9 @@ function resetAllFields(){
 	document.getElementById("range2").innerHTML = 100;
 	document.getElementById("range3").innerHTML = 100;
 	document.getElementById("range4").innerHTML= 50;
-	document.getElementById("out2").value = 0;
-	document.getElementById("out3").value = 0;
-	document.getElementById("out4").value = 0;
+	document.getElementById("out2").innerHTML = 0;
+	document.getElementById("out3").innerHTML = 0;
+	document.getElementById("out4").innerHTML = 0;
 }
 
 //function for CCTA + output for FFR
@@ -100,7 +100,7 @@ function fillData()
 	var input4 = document.getElementById("in4").value;
 	var input5 = document.getElementById("in5").value;
 	var input6 = document.getElementById("in6").value;
-	var output4 = document.getElementById("out4").value;
+	var output4 = document.getElementById("out4").innerHTML;
 
 	document.getElementById("d1").innerHTML=input1;
 	document.getElementById("d2").innerHTML=input2;
