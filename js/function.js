@@ -9,8 +9,8 @@ function cardCalculation(){
 	//add error checking to see if input 1-4 are valid doubles
 	var bCCTA = (input5 === 'CCTA'|input5 === 'ccta');
 	var bCATH = (input5 === 'CATH'|input5 === 'cath');
-	var bMale = (input6 === 'M'|input6 === 'm');
-	var bFemale = (input6 === 'F'|input6 === 'f');
+	var bMale = (input6 === 'Male');
+	var bFemale = (input6 === 'Female');
 
 	if(!((bCCTA | bCATH) && (bMale | bFemale))){
 		alert('Please enter either CATH or CCTA and M or F .');
@@ -26,12 +26,12 @@ function cardCalculation(){
 		output1 = cathFn(input4);
 	}
 	
-	if(input6 === 'M'|input6 === 'm'){
+	if (bMale) {
 		output2 = maleFn(input1,input2,output1).toFixed(2);
 		output3 = maleFn(input1,input3,output1).toFixed(2);
 		document.getElementById("out2").value = output2;
 		document.getElementById("out3").value = output3;
-	}else if (input6 === 'F'|input6 === 'f'){
+	}else if (bFemale) {
 		output2 = femaleFn(input1,input2,output1).toFixed(2);
 		output3 = femaleFn(input1,input3,output1).toFixed(2);
 		document.getElementById("out2").value = output2;
