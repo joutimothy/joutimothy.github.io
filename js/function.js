@@ -92,5 +92,27 @@ function showValue(newValue, spanId)
 	document.getElementById(spanId).innerHTML=newValue;
 }
 
+function fillData()
+{
+	var input1 = document.getElementById("in1").value;
+	var input2 = document.getElementById("in2").value;
+	var input3 = document.getElementById("in3").value;
+	var input4 = document.getElementById("in4").value;
+	var input5 = document.getElementById("in5").value;
+	var input6 = document.getElementById("in6").value;
+	var output4 = document.getElementById("out4").value;
+
+	document.getElementById("d1").innerHTML=input1;
+	document.getElementById("d2").innerHTML=input2;
+	document.getElementById("d3").innerHTML=input3;
+	document.getElementById("d4").innerHTML=input4;
+	document.getElementById("d5").innerHTML=input5;
+	document.getElementById("d6").innerHTML=input6;
+	document.getElementById("dout4").innerHTML=output4;
+
+
+	/* dout4.value=out4.value; */
+}
+
 
 

@@ -94,29 +94,29 @@
                     <form>
                         <p1 class = "text-xs-center">LVMI (g/m2):</p1><span id="range1">125</span>
                         <br>
-                        <input type="range" min="0" max="250" id="in1" oninput="showValue(this.value, 'range1')">
+                        <input type="range" name="in1" min="0" max="250" id="in1" oninput="showValue(this.value, 'range1'); fillData();">
                         <br>
                         <p1>DBP Before (mmHg):</p1><span id="range2">100</span>
                         <br>
-                        <input type="range" min="0" max="200" id="in2" oninput="showValue(this.value, 'range2')">   
+                        <input type="range" name="in2" min="0" max="200" id="in2" oninput="showValue(this.value, 'range2'); fillData();">   
                         <br>
                         <p1>DBP After (mmHg): </p1><span id="range3">100</span>
                         <br>
-                        <input type="range" min="0" max="200" id="in3" oninput="showValue(this.value, 'range3')">
+                        <input type="range" name="in3" min="0" max="200" id="in3" oninput="showValue(this.value, 'range3'); fillData();">
                         <br>
                         <p1>Cornary Stenosis: </p1> <span id="range4">50</span>
                         <br>
-                        <input type="range" min="0" max="100" id="in4" oninput="showValue(this.value, 'range4')">
+                        <input type="range" name="in4" min="0" max="100" id="in4" oninput="showValue(this.value, 'range4'); fillData();">
                         <br>
                         <p1>Category: </p1>
-                        <select id = "in5" style="width:100px;">
+                        <select name="in5" id = "in5" style="width:100px;" oninput="fillData()">
                             <option value = "CCTA"> CCTA</option>
                             <option value = "CATH"> CATH</option>
                         </select>
                         <br>
                         <br>
                         <p1>Gender: </p1>
-                        <select id = "in6" style="width:100px;">
+                        <select name="in6" id = "in6" style="width:100px;" oninput="fillData()">
                             <option value = "M"> Male</option>
                             <option value = "F"> Female</option>
                         </select>
@@ -125,7 +125,7 @@
 
                 <div class="col-md-2 button-Grp">
                     <div>
-                        <button type = "button" class="btn btn-success" onclick ="cardCalculation()"> 
+                        <button type = "button" class="btn btn-success" onclick ="cardCalculation(); fillData();">
                             Calculate
                         </button>
                     </div>
@@ -149,8 +149,12 @@
                         <br>
                         <br>
                         <p1 style="width:86px"> % Drop: </p1>
-                        <input type="text" id = "out4">
+                        <input type="text" name="out4" id = "out4">
                     </form>
+
+                    <div>
+                    In this <span class="result-text" type="text" id="d6">___</span> patient with LVMI of <span class="result-text" type="text" id="d1">___</span> and coronary stenosis of <span class="result-text" type="text" id="d4">___</span> measured by <span class="result-text" type="text" id="d5">___</span>, reducing the DBP from <span class="result-text" type="text" id="d2">___</span> to <span class="result-text" type="text" id="d3" >___</span> resulted in a drop of <span class="result-text" type="text" id="dout4">___</span> in the estimated CBF.
+                    </div>
                 </div>
                 <div class ="col-md-1"></div>
             </div>

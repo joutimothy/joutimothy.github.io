@@ -450,3 +450,10 @@ input[type=range]{
   height: 20px;
 }
 
+span.result-text {
+  display: inline;
+  float: none;
+  font-size: 20px;
+  color: maroon;
+}
+
