@@ -92,7 +92,7 @@
                 <div class="col-md-4">
                 <h3 class="t1">Input</h3>
                     <form>
-                        <p1 class = "text-xs-center">LVMI (g/m<sup>2</sup>):</p1><span id="range1">125</span>
+                        <p1 >LVMI (g/m<sup>2</sup>):</p1><span id="range1">125</span>
                         <br>
                         <input type="range" name="in1" min="0" max="250" id="in1" oninput="showValue(this.value, 'range1'); fillData();">
                         <br>
@@ -139,22 +139,26 @@
 
                 <div class="col-md-4">
                 <h3 class="t1">Result</h3>
+                    <!-- Sentence -->
+                    <div>
+                    In this <span class="result-text" type="text" id="d6">___</span> patient with LVMI of <span class="result-text" type="text" id="d1">___</span> g/m<sup>2</sup> and coronary stenosis of <span class="result-text" type="text" id="d4">___</span> % measured by <span class="result-text" type="text" id="d5">___</span>, when systolic blood pressure is being lowered, concurrent reduction of DBP from <span class="result-text" type="text" id="d2">___</span> mmHg to <span class="result-text" type="text" id="d3" >___</span> mmHg would result in an estimated drop of <span class="result-text" type="text" id="dout4">___</span>% in CBF.
+                    </div>
+                    <br>
+                    <!-- Form -->
                     <form>
-                        <p1 style="width:130px">CBF Before:</p1>
+                        <p1 style="width:130px;font-weight: 600;">CBF Before:</p1>
                         <span type="text" id = "out2"></span>
                         <br>
                         <br>
-                        <p1 style="width:130px">CBF After: </p1>
+                        <p1 style="width:130px;font-weight: 600;">CBF After: </p1>
                         <span type="text" id = "out3"></span>
                         <br>
                         <br>
-                        <p1 style="width:130px"> % Drop in CBF: </p1>
+                        <p1 style="width:130px;font-weight: 600;"> % Drop in CBF: </p1>
                         <span type="text" name="out4" id = "out4"></span>
                     </form>
 
-                    <div>
-                    In this <span class="result-text" type="text" id="d6">___</span> patient with LVMI of <span class="result-text" type="text" id="d1">___</span> g/m<sup>2</sup> and coronary stenosis of <span class="result-text" type="text" id="d4">___</span> % measured by <span class="result-text" type="text" id="d5">___</span>, reducing the DBP from <span class="result-text" type="text" id="d2">___</span> mmHg to <span class="result-text" type="text" id="d3" >___</span> mmHg resulted in a drop of <span class="result-text" type="text" id="dout4">___</span>% in the estimated CBF.
-                    </div>
+                    
                     <h3 class="t1">Legend</h3>
                     <div> 
                         <p1 style ="width:40px">LVMI</p1> = Left Ventricular Mass Indexed<br>
